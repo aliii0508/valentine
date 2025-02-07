@@ -1,0 +1,89 @@
+/* Body Styling */
+body {
+    background-color: #bde3b4; /* Light Sage Green */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensures it takes full height */
+    text-align: center; /* Centers all text */
+    margin: 0; /* Remove default margin */
+    color: white; /* White text for contrast */
+}
+
+/* Container Styling */
+.container {
+    width: 100%;
+    max-width: 800px; /* Restrict content width for better readability */
+    padding: 20px;
+}
+
+/* Header Text Styling */
+.header_text {
+    font-family: 'Nunito', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff; /* Ensures text is white */
+}
+
+/* GIF Container Styling */
+.gif_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* GIF Image Styling */
+.gif_container img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for GIF */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.gif_container img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Button Styling */
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+button {
+    background-color: #ffffff;
+    color: #e93030; /* Red color for button text */
+    padding: 15px 32px;
+    font-size: 16px;
+    margin: 10px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #f5f5f5;
+}
+
+/* Responsive Design for Smaller Screens */
+@media only screen and (max-width: 600px) {
+    .header_text {
+        font-size: 18px;
+    }
+
+    .gif_container img {
+        max-width: 60%; /* Adjust the GIF size for smaller screens */
+    }
+
+    button {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}

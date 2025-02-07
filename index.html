@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Can I be your Valentine? hehe </title>
+        <style>
+            /* Background Image */
+            body {
+                background-image: url('7a2cb4ea-f758-45ac-9395-1d07e89f3a42.jpg'); 
+                background-size: cover; 
+                background-position: center; 
+                background-repeat: no-repeat; 
+                background-attachment: fixed; 
+                margin: 0; 
+            }
+
+            /* Style for header text */
+            .header_text {
+                text-align: center;
+                color: #9b111e;
+                font-family: 'Georgia', serif;
+                font-size: 28px;
+                margin: 10px 0;
+                text-shadow: 2px 2px 5px pink; 
+            }
+
+            /* Style for body text with a pink transparent rectangle background */
+            .body_text {
+                margin-top: 20px;
+                font-size: 16px;
+                font-family: 'Times New Roman', Times, serif;
+                color: #9b111e; /* Dark red color like the header */
+                text-align: center;
+                max-width: 80%;
+                margin: 20px auto;
+                line-height: 1.6;
+                background-color: rgba(255, 105, 180, 0.6); /* Pink transparent background */
+                padding: 20px;
+                border-radius: 8px; /* Rounded corners for the rectangle */
+            }
+
+            .buttons {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                margin-top: 20px;
+            }
+
+            .btn {
+                background-color: #ffffff;
+                color: #9b111e;
+                padding: 15px 32px;
+                text-align: center;
+                font-size: 16px;
+                cursor: pointer;
+                border: none;
+                border-radius: 12px;
+                transition: background-color 0.3s ease;
+                font-weight: bold;
+            }
+
+            .btn:hover {
+                background-color: #9b111e;
+                color: white;
+            }
+
+            .gif_container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 20px;
+            }
+
+            /* Ensure the gif is responsive */
+            .gif_container img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            /* Positioning for the "Yes" buttons */
+            .yes_button {
+                position: absolute;
+                padding: 10px 20px;
+                background-color: #9b111e;
+                color: white;
+                border: none;
+                border-radius: 12px;
+                cursor: pointer;
+                font-weight: bold;
+                transition: background-color 0.3s ease;
+            }
+
+            .yes_button:hover {
+                background-color: #bb2d3b;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <!-- Header text with heart emoji and red velvet shade -->
+                <h1 class="header_text">Good evening, Mia ❤️</h1>
+                <h1 class="header_text">Are you free this upcoming Valentine's day?</h1>
+                <h1 class="header_text">If so, can I gladly ask to be your valentine? hehe </h1>
+            </div>
+
+            <!-- Body text with red color and pink transparent rectangle background -->
+            <div class="body_text">
+                <p class="body_paragraph">
+                    Hi baby!! 😘
+                    Tis I, your Ali so sweet cutie patootie hehe. Can you believe it? Raahhhhh, here we are again, celebrating Hearts Day! I’m waiting for your answer, hoping to be your Valentine for the third time, hehe. We were each other’s first Valentine, and even now, we’re still here. T____T
+                    I was so nervous back then, unsure of how to celebrate it properly. Yet we’re now in 2025. you’re still the one I want to celebrate this special day with. you’re still the person I want to indulge in good food with, exchange small but meaningful gifts with, and simply be in each other’s arms.
+                    I hope we get to celebrate many more Valentine’s Days together. Hopefully even a decade from now. Thank u for giving us another beginning, another chance. I won’t let go of u now that easily, dito ka lang sakin. I hope d ka masawa na ako magiging valentine mo every year HAHEHEHEH I love u mia, and I will always do.
+                    P.S. Baby, huhu, as you can probably tell, I tried making a website, but I think it turned out to be a bit of a fail, hmp. I’m still a noob at this, but I hope you enjoy it kahit papano Hehe, I love you!
+                </p>
+            </div>
+
+            <!-- GIF Section -->
+            <div class="gif_container">
+                <img src="https://media1.tenor.com/m/rIVI9zKfEcIAAAAC/puppy-dog-eyes-sad.gif" alt="Begging Cat">
+            </div>
+
+            <div class="buttons">
+                <button class="btn" id="yesButton" onclick="nextPage()">AWW YESSS MY GF BABY SO CUTE ND POGI</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">NO PANGIT KA!! ayaw ko sayo</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+
+                        // Create 5 "Yes" buttons at random positions
+                        for (let i = 0; i < 5; i++) {
+                            let yesButton = document.createElement('button');
+                            yesButton.innerHTML = "YES!";
+                            yesButton.className = "yes_button";
+
+                            // Randomize the position for each button
+                            let randomX = Math.random() * (window.innerWidth - 150); // Width of the button is 150px
+                            let randomY = Math.random() * (window.innerHeight - 50); // Height of the button is 50px
+
+                            yesButton.style.left = `${randomX}px`;
+                            yesButton.style.top = `${randomY}px`;
+
+                            document.body.appendChild(yesButton);
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
+
+
+
+
+
